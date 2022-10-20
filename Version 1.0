@@ -10,7 +10,7 @@ ci = ""
 #ci stands for computer input
 print('Welcome to Rock, Paper, Scissors SHOOT')
 while cw < 3 and uw < 3:
-  print('--------------------------------------------------')
+  print('----------------------------------------------------------')
   ui = input('You can choose rock, paper, scissors, or random: ')
   if ui == 'random':
     ui = random.choice(options)
@@ -30,6 +30,6 @@ while cw < 3 and uw < 3:
     
 
 if (cw > uw):
-  print('computer won by ' + str(cw - uw) + ' points')
+  print('The computer won by ' + str(cw - uw) + ' points')
 else:
   print('You won by ' + str(uw - cw) + ' points')
