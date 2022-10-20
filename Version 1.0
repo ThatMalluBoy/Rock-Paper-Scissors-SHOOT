@@ -30,6 +30,6 @@ while cw < 3 and uw < 3:
     
 
 if (cw > uw):
-  print('computer won by ' + str(cw) + ' points')
+  print('computer won by ' + str(cw - uw) + ' points')
 else:
-  print('You won by ' + str(uw) + ' points')
+  print('You won by ' + str(uw - cw) + ' points')
