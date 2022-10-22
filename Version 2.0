@@ -23,10 +23,10 @@ while cw < 3 and uw < 3:
     print('This game is a draw')
   elif (ci == 'paper' and ui == 'rock') or (ci == 'rock' and ui   == 'scissors') or (ci == 'scissors' and ui == 'paper'):
     cw += 1
-    print ('Computer has '+ str(cw) + ' points')
+    print ('Computer has '+ str(cw) + ' point')
   else:
     uw += 1
-    print ('You have '+ str(uw) + ' points')
+    print ('You have '+ str(uw) + ' point')
 print('----------------------------------------------------------')
 if (cw > uw):
   print('Well played! But the computer won by ' + str(cw - uw) + ' points')
