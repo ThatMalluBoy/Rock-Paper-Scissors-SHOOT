@@ -1,0 +1,36 @@
+import random
+options = ['paper', 'rock', 'scissors']
+
+cw = 0
+#cw stands for computer win
+uw = 0
+#uw stands for user win
+ui = ""
+#ui stands for user input
+ci = ""
+#ci stands for computer input
+print('Welcome to Rock, Paper, Scissors SHOOT')
+while cw < 3 and uw < 3:
+  print('----------------------------------------------------------')
+  ui = input('You can choose rock, paper, scissors, or random: ')
+  ui = ui.strip()
+  if ui == 'random':
+    ui = random.choice(options)
+  ci = random.choice(options)
+  print('You chose ' + ui)
+  print('The computer chose ' + ci)
+  if ci == ui:
+    print('This game is a draw')
+  elif (ci == 'paper' and ui == 'rock') or (ci == 'rock' and ui   == 'scissors') or (ci == 'scissors' and ui == 'paper'):
+    cw += 1
+    print ('Computer has '+ str(cw) + ' points')
+  else:
+    uw += 1
+    print ('You have '+ str(uw) + ' points')
+print('----------------------------------------------------------')
+if (cw > uw):
+  print('Well played! But the computer won by ' + str(cw - uw) + ' points')
+else:
+  print('Congratulations! You won by ' + str(uw - cw) + ' points')
+
+
