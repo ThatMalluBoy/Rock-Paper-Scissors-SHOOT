@@ -1,7 +1,10 @@
+import random
 repeat = 'yes'
 while (repeat == 'yes'):
-  import random
+  
   print('Welcome to Rock, Paper, Scissors SHOOT')
+  
+  #Inputing the differnt options and variables
   options = ['paper', 'rock', 'scissors']
   cw = 0
   #cw stands for computer win
@@ -13,23 +16,36 @@ while (repeat == 'yes'):
   #ci stands for computer input
   
   while cw < 3 and uw < 3:
+    
+    #Inputing the computer input and user input into the game
     print('----------------------------------------------------------')
     ui = input('You can choose rock, paper, scissors, or random: ')
     ui = ui.strip()
     ci = random.choice(options)
+
+    #If the user choses random
     if ui == 'random':
       ui = random.choice(options)
     print('You chose ' + ui)
     print('The computer chose ' + ci)
+    
+    #draw situation
     if ci == ui:
       print('This game is a draw')
+      
+    #computer win situation
     elif (ci == 'paper' and ui == 'rock') or (ci == 'rock' and ui   == 'scissors') or (ci == 'scissors' and ui == 'paper'):
       cw += 1
       print ('Computer has '+ str(cw) + ' point')
+      
+    #user win situation
     else:
       uw += 1
       print ('You have '+ str(uw) + ' point')
+       
   print('----------------------------------------------------------')
+  
+  #Play again system
   if (cw > uw):
     repeat = input('Well played! But the computer outsmarted you this time! Want you like to play again? (yes or no): ')
   else:
