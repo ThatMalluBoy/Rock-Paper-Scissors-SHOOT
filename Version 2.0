@@ -17,7 +17,7 @@ while (repeat == 'yes'):
   
   while cw < 3 and uw < 3:
     
-    #Inputing the computer input and user input into the game
+    #The computer input and user input into the game
     print('----------------------------------------------------------')
     ui = input('You can choose rock, paper, scissors, or random: ')
     ui = ui.strip()
@@ -47,7 +47,7 @@ while (repeat == 'yes'):
   
   #Play again system
   if (cw > uw):
-    repeat = input('Well played! But the computer outsmarted you this time! Want you like to play again? (yes or no): ')
+    repeat = input('Well played! But the computer outsmarted you this time! Would you like to play again? (yes or no): ')
   else:
     repeat = input('Congratulations! Victory is yours! Do you want to see if you can keep your luck going? (yes or no: ')
 
