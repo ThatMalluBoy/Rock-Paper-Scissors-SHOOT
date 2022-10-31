@@ -1,4 +1,4 @@
-# Rock, paper, scissors, SHOOT
+# Version 1.0: Rock, paper, scissors, SHOOT
 - Just your average rock paper scissors you would play with your friend just that now you can play against the computer!
 - And if you do not know what to chose you can type random and the computer choses one for you!
 
