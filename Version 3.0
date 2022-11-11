@@ -73,7 +73,9 @@ else:
 
     while PL1 < 3 and PL2 < 3:
       import random
-    
+
+      #NOTE: Since I have imported getpass into the program. Neither player will be able to see his or her choice so that it is not possible for anyone to cheat
+      
       #This is player ones turn
       print('--------------------------------------')
       print('Player ones turn!')
@@ -118,7 +120,4 @@ else:
     repeat = input('Well played! Would you like to play again? (yes or no): ')
     if repeat == 'no':
       print('Hope you enjoyed the game!')
-    
-
-
-
+  
