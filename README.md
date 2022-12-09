@@ -12,7 +12,10 @@
 # Version 3.0: PvP has been added!
 - Now you can play against your friend if your want. But your choice will be hidden so that the other player can see what you chose!
 
-# Coming Soon! (Version 3.1)
-- I plan on trying to make the game look cleaner, and I plan on making it to where if player 1 wins then the game says congrats to player 1 and Well played to player 2. And vise versa. 
+# Version 3.1: Colors!
+- I added colors to the game so it looks a little more appealing. Not much, but it is something!
+
+# Coming Soon (Version 3.2)
+- I am planning on adding music to the background of the game. I do not know if it will work but I have to check and see if it will work or not. 
 
 Hope you like it!
