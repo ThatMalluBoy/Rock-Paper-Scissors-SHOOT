@@ -1,0 +1,127 @@
+import getpass
+from colorama import Fore, Back, Style
+
+#PvP or CvP 
+option = input('Hello, How would you like to play? (against computer or against a friend): ')
+
+#Choices for playing the game
+choices = ["against computer", "against a friend"]
+
+#CvP (Computer vs. Player)
+if option == 'against computer':
+  repeat = 'yes'
+  while (repeat == 'yes'):
+    import random
+    
+    print('Welcome to Rock, Paper, Scissors SHOOT')
+    
+    #Inputing the differnt options and variables
+    options = ['paper', 'rock', 'scissors']
+    cw = 0
+    #cw stands for computer win
+    uw = 0
+    #uw stands for user win
+    ui = ""
+    #ui stands for user input
+    ci = ""
+    #ci stands for computer input
+    
+    while cw < 3 and uw < 3:
+      
+      #The computer input and user input into the game
+      print('----------------------------------------------------------')
+      ui = input('You can choose rock, paper, scissors, or random: ')
+      ui = ui.strip()
+      ci = random.choice(options)
+  
+      #If the user choses random
+      if ui == 'random':
+        ui = random.choice(options)
+      print(Fore.BLUE + 'You chose ' + ui)
+      print(Style.RESET_ALL)
+      print(FORE.RED + 'The computer chose ' + ci)
+      print(Style.RESET_ALL)
+      #draw situation
+      if ci == ui:
+        print('This game is a draw')
+        
+      #computer win situation
+      elif (ci == 'paper' and ui == 'rock') or (ci == 'rock' and ui   == 'scissors') or (ci == 'scissors' and ui == 'paper'):
+        cw += 1
+        print ('Computer has '+ str(cw) + ' point')
+        
+      #user win situation
+      else:
+        uw += 1
+        print ('You have '+ str(uw) + ' point')
+         
+    print('----------------------------------------------------------')
+    #Play again system
+    if (cw > uw):
+      repeat = input('Well played! But the computer outsmarted you this time! Would you like to play again? (yes or no): ')
+    else:
+      repeat = input('Congratulations! Victory is yours! Do you want to see if you can keep your luck going? (yes or no: ')
+
+#PvP (Player vs. Player)
+else:
+  repeat = 'yes'
+  while (repeat == 'yes'):
+    
+    #Variables
+    PL1 = 0
+    PL2 = 0
+    Player1 = ""
+    Player2 = ""
+
+    while PL1 < 3 and PL2 < 3:
+      import random
+
+      #NOTE: Since I have imported getpass into the program. Neither player will be able to see his or her choice so that it is not possible for anyone to cheat
+      
+      #This is player ones turn
+      print('--------------------------------------')
+      print('Player ones turn!')
+      Player1 = getpass.getpass('rock, paper, scissors, or random? ')
+      options = ['rock', 'paper', 'scissors']
+
+      #This is player twos turn
+      print('--------------------------------------')
+      print('Player twos turn!')
+      Player2 = getpass.getpass('rock, paper, scissors, or random? ')
+      options = ['rock', 'paper', 'scissors']
+
+      #If either player chooses a random
+      if Player1 == 'random':
+        Player1 = random.choice(options)
+      
+      if Player2 == 'random':
+        Player2 = random.choice(options)
+            
+      #Players choices are shown
+      print('--------------------------------------')
+      print(Fore.BLUE + 'Player one chose ' + Player1)
+      print(Fore.RED + 'Player two chose ' + Player2)
+      print(Style.RESET_ALL)
+      
+      #Draw situation
+      if Player1 == Player2:
+        print('This game has resulted in a draw')
+        
+      #Player1 win situation
+      elif (Player1 == 'paper' and Player2 == 'rock') or (Player1 == 'rock' and Player2 == 'scissors') or (Player1 ==   'scissors' and Player2 == 'paper'):
+          PL1 += 1
+          print(Fore.BLUE + 'Player one has '+ str(PL1) + ' point')
+          print(Fore.RED + 'Player two has '+ str(PL2) + ' point')
+          print(Style.RESET_ALL)
+        
+        #Player2 win situation
+      else:
+          PL2 += 1
+          print(Fore.BLUE + 'Player one has '+ str(PL1) + ' point')
+          print(Fore.RED + 'Player two has '+ str(PL2) + ' point')
+          print(Style.RESET_ALL)
+          print('--------------------------------------')
+    #Play again system
+    repeat = input('Well played! Would you like to play again? (yes or no): ')
+    if repeat == 'no':
+      print('Hope you enjoyed the game!')
