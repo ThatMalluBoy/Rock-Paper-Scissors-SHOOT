@@ -14,8 +14,3 @@
 
 # Version 3.1: Colors!
 - I added colors to the game so it looks a little more appealing. Not much, but it is something!
-
-# Coming Soon (Version 3.2)
-- I am planning on adding music to the background of the game. I do not know if it will work but I have to check and see if it will work or not. 
-
-Hope you like it!
